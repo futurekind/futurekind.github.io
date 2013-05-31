@@ -1,0 +1,32 @@
+$grid-width: 960;
+$gutter-width: 20;
+$columns: 12;
+
+$column-width: $grid-width / $columns - $gutter-width;
+
+.grid-row {
+	@include mq(medium){
+		width: 105%;
+		@include clearfix();
+	}
+}
+
+.grid {
+	@include mq(medium) {
+		float: left;
+		margin: 0;
+	}
+
+	@include mq(large) {
+		margin: 0 $gutter-width+px 0 0;
+		background: #ccc;
+		height: 50px;
+	}
+
+	@for $i from 1 through $columns {
+		&.grid-#{$i} {
+
+			width: $column-width * $i + ($i - 1) * $gutter-width+px;
+		}
+	}
+}

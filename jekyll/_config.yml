@@ -1,0 +1,19 @@
+name: Fabian Trinler
+pygments: true
+
+navigation:
+- text: Home
+  url: /index.html
+  class: item
+- text: Artikel
+  url: /artikel.html
+  class: item
+- text: Fabian Trinler
+  url: /
+  class: lens
+- text: Portfolio
+  url: /portfolio.html
+  class: item
+- text: Über mich
+  url: /ueber-mich.html
+  class: item

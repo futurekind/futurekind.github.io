@@ -1,0 +1,45 @@
+$grid-width: 960;
+$gutter-width: 20;
+$columns: 12;
+
+$column-width: $grid-width / $columns - $gutter-width;
+
+.grid-row {
+
+	@include mq(medium){
+		width: 101%;
+		@include clearfix();
+	}
+
+	&.grid-row-spacer {
+		margin: 0 0 4.5em;
+	}
+}
+
+.grid {
+	margin: 0 0 1.5em;
+
+	@include mq(medium) {
+		float: left;
+		margin: 0 2% 0 0;
+	}
+
+	@include mq(large) {
+		margin: 0 $gutter-width+px 0 0;
+	}
+
+	@for $i from 1 through $columns {
+
+		&.grid-#{$i} {
+			@include mq(medium) {
+				$width: 12 / $i;
+				width: 100 / $width - 2%;
+			}
+
+			@include mq (large) {
+				width: $column-width * $i + ($i - 1) * $gutter-width+px;
+			}
+		}
+
+	}
+}

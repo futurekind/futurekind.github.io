@@ -1,0 +1,16 @@
+@mixin mq($point) {
+	@if $renderForIe {
+		@content;
+	}
+	@else {
+		@if $point == large {
+			@media (min-width: 67.2em) { @content; }
+		}
+		@if $point == medium {
+			@media (min-width: 45em) { @content; }
+		}
+		@else if $point == small {
+			@media (max-width: 650px)  { @content; }
+		}
+	}
+}

@@ -1,0 +1,9 @@
+<nav>
+	<ul class="navigation">
+		{% for link in site.navigation %}
+		<li>
+			<a class="{{link.class}} {%if page.url == link.url%}active{%endif%}" href="{{link.url}}">{{link.text}}</a>
+		</li>
+		{% endfor %}
+	</ul>
+</nav>

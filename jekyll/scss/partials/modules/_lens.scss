@@ -1,0 +1,42 @@
+.lens {
+	width: 75px;
+	height: 75px;
+	margin: 0 0 0 -38px;
+	border: 7px solid #333;
+	position: absolute;
+	left: 50%;
+	top: .75em;
+	overflow: hidden;
+	@include border-radius(75px);
+	background: url('layout/avatar.jpg') 0 0 no-repeat;
+	background-size: cover;
+	@include box-shadow(inset #000 0 0 9px, #fff 0 0 3px);
+	@include transition-duration(.2s);
+	text-indent: -9999px;
+
+	&:after {
+		content: "";
+		width: 100px;
+		height: 100px;
+		@include border-radius(100px);
+		position: absolute;
+		top: -60px;
+		left: -25px;
+		background: rgba(255, 255, 255, .4);
+		@include transition-property(top, left);
+		@include transition-duration(.2s);
+	}
+
+	&:hover {
+		@include box-shadow(inset #000 0 0 9px, #000 0 0 15px);
+		&:after {
+			top: -100px;
+			left: -100px;
+		}
+	}
+
+	@include mq(large) {
+
+		top: 2em;
+	}
+}

@@ -1,0 +1,56 @@
+.navigation {
+
+	margin: 0;
+	padding: 0;
+	// @include clearfix;
+
+	@include mq(medium) {
+		display: inline-block;
+	}
+
+	& > li {
+
+		@include mq(medium){
+			float: left;
+		}
+
+		& > .item {
+			padding: .6em 2em .6em;
+			border-bottom: 1px solid tint($colorStandard, 50%);
+			display: block;
+			color: tint($colorStandard, 50%);
+			font: {
+				size: 1em;
+			}
+			text: {
+				decoration: none;
+				transform: uppercase;
+				shadow: #fff 0 1px 0;
+			}
+			@include transition-property(color);
+			@include transition-duration(.5s);
+
+			@include mq(medium) {
+				font: {
+					size: 1em;
+				}
+			}
+
+			@include mq(large) {
+				font: {
+					size: 1.25em;
+				}
+			}
+
+			&:hover {
+				color: $colorStandard;
+			}
+
+			&.active {
+				border-bottom: 1px solid $colorStandard;
+				color: $colorStandard;
+			}
+
+		}
+	}
+}
