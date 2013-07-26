@@ -5,15 +5,12 @@ navigation:
 - text: Home
   url: /index.html
   class: item
-- text: Artikel
+- text: Portfolio
   url: /
   class: item
 - text: Fabian Trinler
   url: /
   class: lens
-- text: Portfolio
-  url: /
-  class: item
 - text: Über mich
   url: /
   class: item
