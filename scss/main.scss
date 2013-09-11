@@ -5,6 +5,7 @@
 @import "partials/globals";			// globale Einstellungen
 @import "partials/normalize";		// CSS-Reset der höflichen Art
 @import "partials/mixins/mq";
+@import "partials/mixins/font-size";
 @import "compass/css3";
 @import "compass/utilities/general/clearfix";
 
@@ -22,10 +23,8 @@ h2 {
 	border: {
 		bottom: 1px solid tint($colorStandard, 45%);
 	}
-	font: {
-		size: 2em;
-		weight: normal;
-	}
+	@include font-size(32);
+	font-weight: normal;
 	text: {
 		transform: uppercase;
 		// align: center;
@@ -47,29 +46,23 @@ h2 {
 
 h3 {
 	margin: 1.5em 0 .75em;
-	font: {
-		weight: normal;
-		size: 1.75em;
-	}
+	@include font-size(28);
+	font-weight: normal;
 	text: {
 		shadow: #fff 0 1px 0;
 	}
 
 	&.post-heading {
 		margin: 0;
-		font: {
-			weight: bold;
-			size: 1em;
-		}
+		font-weight: bold;
+		@include font-size(16);
 	}
 }
 
 p, ul, ol {
 	margin: 0 0 1.25em;
-	font: {
-		size: 1.2em;
-	}
-	line-height: 1.5;
+	@include font-size(18);
+	line-height: 1.5em;
 
 	&:last-child {
 		margin: 0;
@@ -77,10 +70,6 @@ p, ul, ol {
 }
 
 a {
-	font: {
-		// size: 1.2em
-	}
-	line-height: 1.5;
 	color: $colorStandard;
 
 	&:hover {
@@ -157,6 +146,7 @@ nav {
 @import "partials/modules/navigation";
 @import "partials/modules/lens";
 @import "partials/modules/abstract";
+@import "partials/modules/portfolio";
 
 
 // ****************************

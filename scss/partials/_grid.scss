@@ -16,8 +16,10 @@ $column-width: $grid-width / $columns - $gutter-width;
 	}
 }
 
-.grid {
+.grid-col {
 	margin: 0 0 1.5em;
+	@include font-size(18);
+	line-height: 1.5em;
 
 	@include mq(medium) {
 		float: left;
@@ -30,7 +32,7 @@ $column-width: $grid-width / $columns - $gutter-width;
 
 	@for $i from 1 through $columns {
 
-		&.grid-#{$i} {
+		&.grid-col--#{$i} {
 			@include mq(medium) {
 				$width: 12 / $i;
 				width: 100 / $width - 2%;
