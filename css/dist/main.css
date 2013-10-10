@@ -530,6 +530,7 @@ table {
 
 body {
   background-color: #CFCFCF;
+  background-image: url("layout/bg.png");
   font-family: "Source Sans Pro", sans-serif;
   font-size: 100%;
   color: #333333;
@@ -930,7 +931,7 @@ nav:after {
   top: .75em;
   overflow: hidden;
   border-radius: 75px;
-  background: url("layout/avatar.jpg") 0 0 no-repeat;
+  background: url("layout/avatar.png") 0 0 no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
   -webkit-box-shadow: inset black 0 0 9px, white 0 0 3px;
