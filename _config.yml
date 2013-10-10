@@ -1,16 +1,18 @@
 name: Fabian Trinler
 pygments: true
 
+exclude: [src, vendor, node_modules, templates, Gruntfile.js, package.json]
+
 navigation:
 - text: Home
   url: /index.html
   class: item
-- text: Portfolio
-  url: /
+- text: Artikel
+  url: /artikel
   class: item
 - text: Fabian Trinler
   url: /
   class: lens
 - text: Über mich
-  url: /
+  url: /ueber-mich
   class: item

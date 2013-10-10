@@ -1,0 +1,67 @@
+body {
+	background: url("layout/bg.png");
+	font: {
+		family: $fontStandard;
+		size: 100%;
+	}
+	color: $colorStandard;
+}
+
+h2 {
+	position: relative;
+	border: {
+		bottom: 1px solid tint($colorStandard, 45%);
+	}
+	@include font-size(32);
+	font-weight: normal;
+	text: {
+		transform: uppercase;
+		// align: center;
+		shadow: #fff 0 1px 0;
+	}
+
+	&:after {
+		content: "";
+		width: 100%;
+		height: 1px;
+		position: absolute;
+		bottom: -2px;
+		left: 0;
+		border: {
+			bottom: 1px solid #fff;
+		}
+	}
+}
+
+h3 {
+	margin: 1.5em 0 .75em;
+	@include font-size(28);
+	font-weight: normal;
+	text: {
+		shadow: #fff 0 1px 0;
+	}
+
+	&.post-heading {
+		margin: 0;
+		font-weight: bold;
+		@include font-size(16);
+	}
+}
+
+p, ul, ol {
+	margin: 0 0 1.25em;
+	@include font-size(18);
+	line-height: 1.5em;
+
+	&:last-child {
+		margin: 0;
+	}
+}
+
+a {
+	color: $colorStandard;
+
+	&:hover {
+		color: tint($colorStandard, 35%);
+	}
+}
