@@ -1,0 +1,26 @@
+// Verhindern von console-Fehlern in Browsern ohne Konsole
+// siehe https://github.com/h5bp/html5-boilerplate/blob/master/js/plugins.js
+(function() {
+    var noop = function noop() {};
+    var methods = [
+        'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
+        'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
+        'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
+        'timeStamp', 'trace', 'warn'
+    ];
+    var length = methods.length;
+    var console = window.console || {};
+
+    while (length--) {
+        // Only stub undefined methods.
+        console[methods[length]] = console[methods[length]] || noop;
+    }
+}());
+
+// Platz für weitere JS/jQuery-Helper
+/****************************************
+	jQuery: Dom ready
+/****************************************/
+$(document).ready(function(){
+	// Dom ist bereit => let's go
+});

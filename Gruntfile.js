@@ -68,7 +68,7 @@ module.exports = function(grunt) {
 		},
 
 		jekyll: {
-			serve: true
+			serve: false
 		},
 
 		watch: {

@@ -529,10 +529,16 @@ table {
 }
 
 body {
-  background: url("layout/bg.png");
+  background-color: #CFCFCF;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 100%;
   color: #333333;
+}
+
+@media (min-width: 61.2em) {
+  body {
+    background-image: url("layout/bg.png");
+  }
 }
 
 h2 {
@@ -593,7 +599,7 @@ a:hover {
   color: tint(#333333, 35%);
 }
 
-@media (min-width: 45em) {
+@media (min-width: 33.125em) {
   .grid-row {
     width: 101%;
     *zoom: 1;
@@ -621,7 +627,7 @@ a:hover {
   line-height: 1.5em;
 }
 
-@media (min-width: 45em) {
+@media (min-width: 33.125em) {
   .grid-col {
     float: left;
     margin: 0 2% 0 0;
@@ -634,7 +640,7 @@ a:hover {
   }
 }
 
-@media (min-width: 45em) {
+@media (min-width: 33.125em) {
   .grid-col.grid-col--1 {
     width: 6.33333%;
   }
@@ -646,7 +652,7 @@ a:hover {
   }
 }
 
-@media (min-width: 45em) {
+@media (min-width: 33.125em) {
   .grid-col.grid-col--2 {
     width: 14.66667%;
   }
@@ -658,7 +664,7 @@ a:hover {
   }
 }
 
-@media (min-width: 45em) {
+@media (min-width: 33.125em) {
   .grid-col.grid-col--3 {
     width: 23%;
   }
@@ -670,7 +676,7 @@ a:hover {
   }
 }
 
-@media (min-width: 45em) {
+@media (min-width: 33.125em) {
   .grid-col.grid-col--4 {
     width: 31.33333%;
   }
@@ -682,7 +688,7 @@ a:hover {
   }
 }
 
-@media (min-width: 45em) {
+@media (min-width: 33.125em) {
   .grid-col.grid-col--5 {
     width: 39.66667%;
   }
@@ -694,7 +700,7 @@ a:hover {
   }
 }
 
-@media (min-width: 45em) {
+@media (min-width: 33.125em) {
   .grid-col.grid-col--6 {
     width: 48%;
   }
@@ -706,7 +712,7 @@ a:hover {
   }
 }
 
-@media (min-width: 45em) {
+@media (min-width: 33.125em) {
   .grid-col.grid-col--7 {
     width: 56.33333%;
   }
@@ -718,7 +724,7 @@ a:hover {
   }
 }
 
-@media (min-width: 45em) {
+@media (min-width: 33.125em) {
   .grid-col.grid-col--8 {
     width: 64.66667%;
   }
@@ -730,7 +736,7 @@ a:hover {
   }
 }
 
-@media (min-width: 45em) {
+@media (min-width: 33.125em) {
   .grid-col.grid-col--9 {
     width: 73%;
   }
@@ -742,7 +748,7 @@ a:hover {
   }
 }
 
-@media (min-width: 45em) {
+@media (min-width: 33.125em) {
   .grid-col.grid-col--10 {
     width: 81.33333%;
   }
@@ -754,7 +760,7 @@ a:hover {
   }
 }
 
-@media (min-width: 45em) {
+@media (min-width: 33.125em) {
   .grid-col.grid-col--11 {
     width: 89.66667%;
   }
@@ -766,7 +772,7 @@ a:hover {
   }
 }
 
-@media (min-width: 45em) {
+@media (min-width: 33.125em) {
   .grid-col.grid-col--12 {
     width: 98%;
   }
@@ -805,7 +811,7 @@ header:after {
   clear: both;
 }
 
-@media (min-width: 45em) {
+@media (min-width: 33.125em) {
   header {
     text-align: center;
   }
@@ -826,7 +832,7 @@ nav:after {
   clear: both;
 }
 
-@media (min-width: 45em) {
+@media (min-width: 33.125em) {
   nav {
     margin: 9em 0 0;
   }
@@ -863,13 +869,13 @@ nav:after {
   padding: 0;
 }
 
-@media (min-width: 45em) {
+@media (min-width: 33.125em) {
   .navigation {
     display: inline-block;
   }
 }
 
-@media (min-width: 45em) {
+@media (min-width: 33.125em) {
   .navigation > li {
     float: left;
   }
@@ -879,24 +885,29 @@ nav:after {
   padding: 0.6em 2em 0.6em;
   border-bottom: 1px solid #b3b3b3;
   display: block;
-  color: #b3b3b3;
-  font-size: 1em;
+  color: gray;
   text-decoration: none;
   text-transform: uppercase;
   text-shadow: white 0 1px 0;
+  text-align: center;
   -webkit-transition: color 0.5s;
   transition: color 0.5s;
+  font-size: 18px;
+  font-size: 1.125rem;
 }
 
-@media (min-width: 45em) {
+@media (min-width: 33.125em) {
   .navigation > li > .item {
-    font-size: 1em;
+    font-size: 22px;
+    font-size: 1.375rem;
   }
 }
 
 @media (min-width: 61.2em) {
   .navigation > li > .item {
-    font-size: 1.25em;
+    color: #b3b3b3;
+    font-size: 24px;
+    font-size: 1.5rem;
   }
 }
 
@@ -960,16 +971,16 @@ nav:after {
 
 .abstract {
   margin: 2em 0;
-  font-size: 28px;
-  font-size: 1.75rem;
+  font-size: 22px;
+  font-size: 1.375rem;
   font-style: italic;
   text-shadow: white 0 1px 0;
   line-height: 1.5em;
 }
 
-@media (min-width: 61.2em) {
+@media (min-width: 33.125em) {
   .abstract {
-    font-style: italic;
-    font-size: 1.75em;
+    font-size: 28px;
+    font-size: 1.75rem;
   }
 }

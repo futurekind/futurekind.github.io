@@ -1,16 +1,11 @@
 .abstract {
 	margin: 2em 0;
-	@include font-size(28);
+	@include font-size(22);
 	font-style: italic;
-	text: {
-		shadow: #fff 0 1px 0;
-	}
+	text-shadow: #fff 0 1px 0;
 	line-height: 1.5em;
 
-	@include mq(large) {
-		font: {
-			style: italic;
-			size: 1.75em;
-		}
+	@include mq(medium) {
+		@include font-size(28);
 	}
 }
