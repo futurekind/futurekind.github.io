@@ -1,0 +1,106 @@
+.article {
+	margin: 0 0 2em;
+	padding: 1em;
+	border: 1px solid #fff;
+	position: relative;
+	background-color: #fff;
+	background: rgba(255, 255, 255, .25);
+
+	&:before {
+		content: "";
+		border: 1px solid #ccc;
+		position: absolute;
+		top: -2px;
+		bottom: -2px;
+		left: -2px;
+		right: -2px;
+	}
+
+	@include mq(large) {
+		width: 720px;
+		margin: 0 auto 2em;
+	}
+}
+
+.article__heading {
+	margin: 0 auto .5em;
+	padding-left: 5px;
+	position: relative;
+	text-align: center;
+	text-shadow: #fff 0 1px 0;
+	@include font-size(22);
+
+	&:before {
+		content: "";
+		padding: 0 5px;
+		border: 7px solid $colorStandard;
+		border-left-color: transparent;
+		position: absolute;
+		left: -25px;
+		top: 6px;
+		transition: transform .5s, top .5s;
+	}
+
+	@include mq(medium) {
+
+		width: 85%;
+		@include font-size(28);
+
+		&:before {
+			padding: 0 15px;
+			border-width: 15px;
+			top: -4px;
+			left: -55px;
+			transform: rotate(-90deg);
+		}
+	}
+}
+
+.article__meta {
+	display: block;
+	color: lighten($colorStandard, 25%);
+	text-align: center;
+	text-shadow: #fff 0 1px 0;
+	@include font-size(12);
+}
+
+.article__body {
+	margin: 2em 0;
+	text-shadow: #fff 0 1px 0;
+	@include font-size(16);
+
+	@include mq(medium) {
+		width: 85%;
+		margin: 2em auto;
+		@include font-size(18);
+	}
+}
+
+.article__abstract {
+	line-height: 1.5em;
+}
+
+.article__abstract--overview {
+	@extend .article__abstract;
+}
+
+/**
+ * States
+ */
+.is-article-standard {
+	.article__heading {
+		&:before {
+			border-color: $colorPrimary;
+			border-left-color: transparent;
+		}
+	}
+}
+
+.is-article-link {
+	.article__heading {
+		&:before {
+			border-color: $colorSecondary;
+			border-left-color: transparent;
+		}
+	}
+}

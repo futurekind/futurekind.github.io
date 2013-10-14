@@ -1,0 +1,44 @@
+.section-heading {
+	width: 100%;
+	margin: 2em auto 1em;
+	padding: 0 0 .5em;
+	position: relative;
+	text-align: center;
+	text-transform: uppercase;
+	text-shadow: #fff 0 1px 0;
+	@include font-size(26);
+
+	@include mq(medium) {
+		padding: 0;
+		@include font-size(36);
+	}
+
+	@include mq(large) {
+		width: 600px;
+	}
+
+	&:before {
+		content: "";
+		width: 100%;
+		margin-top: -1px;
+		border-top: 1px solid #999;
+		border-bottom: 1px solid #fff;
+		position: absolute;
+		left: 0;
+		top: auto;
+		bottom: -2px;
+
+		@include mq(medium) {
+			top: 50%;
+			bottom: auto;
+		}
+	}
+}
+
+.section-heading__content {
+	padding: 0 .5em;
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	background-image: url('layout/bg.png');
+}
