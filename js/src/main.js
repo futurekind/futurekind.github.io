@@ -1,6 +1,0 @@
-/****************************************
-	jQuery: Dom ready
-/****************************************/
-$(document).ready(function(){
-	// Dom ist bereit => let's go
-});
