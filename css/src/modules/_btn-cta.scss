@@ -1,0 +1,14 @@
+.btn-cta {
+	padding: .2em .5em .3em;
+	display: inline-block;
+	float: right;
+	color: #fff;
+	background: $colorLinkBg;
+	text-shadow: none;
+	text-decoration: none;
+	transition: background .5s;
+
+	&:hover {
+		background: darken($colorLinkBg, 15%);
+	}
+}

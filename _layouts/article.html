@@ -1,0 +1,35 @@
+{%include header.html%}
+<body>
+
+	<div class="l-page">
+		<header>
+			{%include navigation.html%}
+		</header>
+
+		<div class="l-main">
+			{% if page.excerpt %}
+			<div class="abstract">
+				{{ page.excerpt }}
+			</div>
+			{% endif %}
+
+			<h1 class="section-heading">
+				<span class="section-heading__content">
+					{% if page.link %}
+						<a href="{{ page.link }}">{{ page.title }}</a>
+					{% else %}
+						{{ page.title }}
+					{% endif %}
+				</span>
+			</h1>
+
+			<article class="article">
+				<div class="article__body">{{ content }}</div>
+			</article>
+
+		</div>
+	</div>
+
+	{%include footer.html%}
+</body>
+</html>

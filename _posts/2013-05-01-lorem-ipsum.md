@@ -1,8 +1,9 @@
 ---
-layout: default
-is-portfolio: true
-title: lorem Ipsum
-excerpt: Molestiae sit recusandae dolor fuga ullam est commodi quisquam consequuntur quam repellendus voluptas sapiente doloribus tempora ipsam eaque quae.
+layout: article
+title: Working with Atomic Design
+excerpt:
+category: link
+link: http://example.com
 ---
 
 ##Titel

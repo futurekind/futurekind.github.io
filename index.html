@@ -9,18 +9,13 @@ title: Hallo
 
 <h1 class="section-heading"><span class="section-heading__content">Die Neusten Artikel</span></h1>
 
-<article class="article is-article-link">
-	<h2 class="article__heading">Atomic Web Design</h2>
-	<span class="article__meta">03.05.2013 &bull; 21:53 Uhr</span>
-	<div class="article__body">
-		<p class="article__abstract--overview">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-	</div>
-</article>
-
-<article class="article is-article-standard">
-	<h2 class="article__heading">Was ich lernte nach sieben Jahren Responsive Web Design</h2>
-	<span class="article__meta">18.01.2013 &bull; 12:36 Uhr</span>
-	<div class="article__body">
-		<p class="article__abstract--overview">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, quos veritatis libero assumenda ipsam asperiores esse ex temporibus quisquam consequuntur modi iste at optio facere dignissimos suscipit dolore eaque distinctio voluptatibus pariatur!</p>
-	</div>
-</article>
+{% for post in site.posts %}
+	<article class="article is-article-{% if post.category == 'article' %}standard{% else %}link{% endif %}">
+		<h2 class="article__heading"><a href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}">{{ post.title }}</a></h2>
+		<span class="article__meta">{{ post.date | date: "%d.%m.%Y" }}</span>
+		<div class="article__body">
+			<p class="article__abstract--overview">{{ post.excerpt }}</p>
+			<p><a href="{{ post.url }}" class="btn-cta">Lesen &raquo;</a></p>
+		</div>
+	</article>
+{% endfor %}

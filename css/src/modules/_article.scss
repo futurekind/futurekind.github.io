@@ -14,6 +14,7 @@
 		bottom: -2px;
 		left: -2px;
 		right: -2px;
+		z-index: -1;
 	}
 
 	@include mq(large) {
@@ -68,6 +69,7 @@
 	margin: 2em 0;
 	text-shadow: #fff 0 1px 0;
 	@include font-size(16);
+	@include clearfix;
 
 	@include mq(medium) {
 		width: 85%;
