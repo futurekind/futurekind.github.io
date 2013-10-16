@@ -31,6 +31,15 @@
 	text-shadow: #fff 0 1px 0;
 	@include font-size(22);
 
+	a {
+		text-decoration: none;
+		transition: color .5s;
+
+		&:hover {
+			color: $colorPrimary;
+		}
+	}
+
 	&:before {
 		content: "";
 		padding: 0 5px;

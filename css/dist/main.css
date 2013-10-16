@@ -960,6 +960,16 @@ nav:after {
   font-size: 1.625rem;
 }
 
+.section-heading a {
+  text-decoration: none;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+.section-heading a:hover {
+  color: #36558a;
+}
+
 @media (min-width: 33.125em) {
   .section-heading {
     padding: 0;
@@ -1036,6 +1046,16 @@ nav:after {
   text-shadow: white 0 1px 0;
   font-size: 22px;
   font-size: 1.375rem;
+}
+
+.article__heading a {
+  text-decoration: none;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+.article__heading a:hover {
+  color: #36558a;
 }
 
 .article__heading:before {
@@ -1128,7 +1148,7 @@ nav:after {
   display: inline-block;
   float: right;
   color: #fff;
-  background: #5178bb;
+  background: #333333;
   text-shadow: none;
   text-decoration: none;
   -webkit-transition: background 0.5s;

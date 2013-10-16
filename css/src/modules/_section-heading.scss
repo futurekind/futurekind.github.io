@@ -8,6 +8,15 @@
 	text-shadow: #fff 0 1px 0;
 	@include font-size(26);
 
+	a {
+		text-decoration: none;
+		transition: color .5s;
+
+		&:hover {
+			color: $colorPrimary;
+		}
+	}
+
 	@include mq(medium) {
 		padding: 0;
 		@include font-size(36);

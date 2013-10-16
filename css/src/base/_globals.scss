@@ -5,6 +5,7 @@ $renderForIe: false !default;
 $colorStandard: #333;
 $colorPrimary: #36558A;
 $colorSecondary: #83B209;
-$colorLinkBg: lighten($colorPrimary, 15%);
+// $colorLinkBg: lighten($colorPrimary, 15%);
+$colorLinkBg: $colorStandard;
 
 $fontStandard: 'Source Sans Pro', sans-serif;

@@ -9,6 +9,6 @@
 	transition: background .5s;
 
 	&:hover {
-		background: darken($colorLinkBg, 15%);
+		background: $colorPrimary;
 	}
 }
