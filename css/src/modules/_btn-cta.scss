@@ -1,5 +1,7 @@
 .btn-cta {
 	padding: .2em .5em .3em;
+	border: 1px solid #fff;
+	position: relative;
 	display: inline-block;
 	float: right;
 	color: #fff;
@@ -7,6 +9,17 @@
 	text-shadow: none;
 	text-decoration: none;
 	transition: background .5s;
+
+	&:before {
+		content: "";
+		border: 1px solid #999;
+		position: absolute;
+		top: -2px;
+		left: -2px;
+		right: -2px;
+		bottom: -2px;
+		z-index: -1;
+	}
 
 	&:hover {
 		background: $colorPrimary;

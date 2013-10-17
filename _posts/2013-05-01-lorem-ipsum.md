@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Working with Atomic Design
-excerpt:
+excerpt: Quisquam consequuntur quam repellendus voluptas sapiente doloribus tempora ipsam eaque quae.
 category: link
 link: http://example.com
 ---
